@@ -1,0 +1,164 @@
+<div class="container m-5 p-5 mx-auto border shadow ">
+    <div class="row">
+      <div class="col-md-4">
+          <table class="my-5 py-5" class="table table-bordered">
+            <thead>
+              <div class="mx-auto" style ="height:350px ;width:200px" >
+              <h1 > Phone Comparator </h1> 
+            </div>
+            </thead>
+          <tbody >
+              <tr>
+                    <td> Name  </td>
+              </tr>   
+              <tr>
+                  <td> Display  </td>
+              </tr> 
+              <tr>
+                <td> Resolution  </td>
+              </tr> 
+              <tr>
+              <td> Processor </td>
+              </tr> 
+              <tr>
+              <td> Front Camera </td>
+              </tr> 
+              <tr>
+                  <td> Rear Camera </td>
+                  </tr> 
+              <tr>
+              <td> Storage </td>
+              </tr>   
+              <tr>
+                  <td> OS </td>
+                  </tr>   
+              <tr>
+                  <td> Battery </td>
+              </tr>   
+
+              <tr>
+                  <td> Rating </td>
+              </tr>   
+              <tr>
+                  <td> Price </td>
+              </tr>  
+                  
+            </tbody>
+           
+            </table>
+      
+          </div>
+        <div class="col-md-4 ">
+            <table  class="table table-bordered">
+                <thead class="">
+                 <tr>
+                    <th>
+                        <img id="p1" class="img-thunbnail mx-auto" src = {{p1}} height="250px" width = "200px" style="padding : 20px" />
+              
+                        <form [formGroup]="phone1Form">
+                        <input type = "text" name="phone1" formControlName="phone1" class="form-control" placeholder="Enter phone" >
+                        <button (click)="getPhone1()" class="form-control">add</button>
+                      </form>
+
+                    </th>
+                 </tr>
+                </thead>
+                    <tbody id="test1">
+                      
+                        <tr>
+                              <td> {{phone1.name}}  </td>
+                        </tr>   
+                        <tr>
+                            <td> {{phone1.display}}  </td>
+                        </tr> 
+                        <tr>
+                          <td> {{phone1.resolution}}  </td>
+                        </tr> 
+                        <tr>
+                        <td> {{phone1.processor}} </td>
+                        </tr> 
+                        <tr>
+                        <td> {{phone1.frontCamera}} </td>
+                        </tr> 
+                        <tr>
+                            <td> {{phone1.rearCamera}} </td>
+                        </tr> 
+                        <tr>
+                        <td> {{phone1.storage}} </td>
+                        </tr>   
+                        <tr>
+                            <td> {{phone1.os}} </td>
+                        </tr>   
+                        <tr>
+                            <td> {{phone1.battery}} </td>
+                        </tr>   
+                        <tr>
+                            <td> {{phone1.rating}} </td>
+                        </tr>   
+                        <tr>
+                            <td> {{phone1.price}} </td>
+                        </tr>  
+                
+                      </tbody>
+              
+                </table>
+         </div>
+
+         <div class="col-md-4">
+            <table  class="table table-bordered">
+            <thead>
+             <tr>
+                <th scope="col">
+                    <img id="p2" class="img-thunbnail" src = {{p2}} height="250px" width = "200px" style="padding : 20px" />
+                    <form [formGroup]="phone2Form">
+                    <input type = "text" name="phone2" formControlName="phone2" class="form-control" placeholder="Enter phone">
+                        <button (click)="getPhone2()" class="form-control">add</button>
+                      </form>
+                </th>
+             </tr>
+            </thead>
+            
+            <tbody id="test2">
+              <tr>
+              <td> {{phone2.name}}  </td>
+              </tr>   
+              <tr>
+              <td> {{phone2.display}}  </td>
+              </tr> 
+              <tr>
+              <td> {{phone2.resolution}}  </td>
+              </tr> 
+              <tr>
+              <td> {{phone2.processor}} </td>
+              </tr> 
+              <tr>
+              <td> {{phone2.frontCamera}} </td>
+              </tr> 
+              <tr>
+              <td> {{phone2.rearCamera}} </td>
+              </tr> 
+              <tr>
+              <td> {{phone2.storage}} </td>
+              </tr>   
+              <tr>
+              <td> {{phone2.os}} </td>
+              </tr>   
+              <tr>
+              <td> {{phone2.battery}} </td>
+              </tr>   
+              <tr>
+              <td> {{phone2.rating}} </td>
+              </tr>   
+              <tr>
+              <td> {{phone2.price}} </td>
+              </tr>  
+                  
+            </tbody>
+          
+            </table>
+         </div>
+
+
+
+    </div>
+</div>
