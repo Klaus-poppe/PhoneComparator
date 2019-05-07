@@ -69,7 +69,7 @@ export class MainComponent implements OnInit {
           }
         );
        document.getElementById("test2").style.visibility = "visible";
-        document.getElementById("p2").style.visibility = "visible";
+       document.getElementById("p2").style.visibility = "visible";
       }
     
 }
