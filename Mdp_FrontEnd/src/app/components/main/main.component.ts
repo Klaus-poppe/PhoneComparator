@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PhoneService } from 'src/app/services/phone-service.service';
+import { Phone } from 'src/app/classes/phone';
 
 @Component({
   selector: 'app-main',
@@ -10,16 +11,17 @@ import { PhoneService } from 'src/app/services/phone-service.service';
 export class MainComponent implements OnInit {
 
   
-  constructor(public data:PhoneService) {   }
+  constructor(public data:PhoneService) {    }
 
-  
   test:any;
+  display1:boolean= false;
+  display2:boolean= false;
   phone1Form:FormGroup;
   phone2Form:FormGroup;
   p1:any;
   p2:any;
-  phone1;any;
-  phone2:any;
+  phone1:Phone = new Phone();
+  phone2:Phone = new Phone();
 
   ngOnInit() {
     this.phone1Form = new FormGroup({
@@ -41,15 +43,14 @@ export class MainComponent implements OnInit {
             this.test = result;
             this.phone1 = this.test;
             console.log(this.test.path)
-            this.p1 = "src/assets/" +this.test.path
+            this.p1 = "src/assets/" + this.test.path
             
           },
           error=>{
           console.error();
           }
         );
-        document.getElementById("test1").style.visibility = "visible";
-        document.getElementById("p1").style.visibility = "visible";
+        this.display1=true;
         
         
       }
@@ -68,8 +69,7 @@ export class MainComponent implements OnInit {
           console.error();
           }
         );
-       document.getElementById("test2").style.visibility = "visible";
-       document.getElementById("p2").style.visibility = "visible";
+        this.display2=true;
       }
     
 }
